@@ -4,8 +4,11 @@ from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lsa import LsaSummarizer
 import nltk
 
-# Add punkt tokenizer
-nltk.data.path.append('./nltk_data')  # Ensure the downloaded punkt model is used
+# Download punkt tokenizer
+nltk.download('punkt')
+
+# Add punkt tokenizer to the path if needed
+nltk.data.path.append('./nltk_data')
 
 # Function to summarize text
 def summarize_text(text, num_sentences):
